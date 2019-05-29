@@ -1,0 +1,95 @@
+package syst
+public
+	system CruiseControl
+		
+	end CruiseControl;
+	
+	system implementation CruiseControl.with_devices
+		subcomponents
+			this_speed_sensor: device SpeedSensor;
+			
+		
+		
+	end CruiseControl.with_devices;
+	
+	device SpeedSensor
+		features
+			speed_data: out data port;
+	end SpeedSensor;
+	
+	device implementation SpeedSensor.impl
+		
+	end SpeedSensor.impl;
+	
+	device Gyroscope
+		features
+			gyro_data: out data port;
+	end Gyroscope;
+	
+	device implementation Gyroscope.impl
+		
+	end Gyroscope.impl;
+	
+	device Geolocation
+		features
+			geo_data: out data port;
+	end Geolocation;
+	
+	device implementation Geolocation.impl
+		
+	end Geolocation.impl;
+	
+	device Camera
+		features
+			camera_data: out data port;
+	end Camera;
+	
+	device implementation Camera.impl
+		
+	end Camera.impl;
+	
+	device BreaksController
+		features
+			break_on_off: in event port;
+	end BreaksController;
+	
+	device implementation BreaksController.impl
+		
+	end BreaksController.impl;
+	
+	device GasController
+		features
+			gas_on_off: in event port;
+	end GasController;
+	
+	device implementation GasController.impl
+		
+	end GasController.impl;
+
+	device UserPanel
+		
+	end UserPanel;
+	
+	device implementation UserPanel.impl
+		
+	end UserPanel.impl;
+	
+--	device CombustionSensor
+--		
+--	end CombustionSensor;
+--	
+--	device implementation CombustionSensor.impl
+--		
+--	end CombustionSensor.impl;
+--	
+--	device GearboxController
+--		
+--	end GearboxController;
+--	
+--	device implementation GearboxController.impl
+--		
+--	end GearboxController.impl;
+	
+	
+	
+end syst;
