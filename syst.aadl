@@ -86,10 +86,6 @@ public
 			gear_control_conn: port this_thread_control.gear_shift_out -> gear_shift_out;
 	end Controller.with_threads;
 	
-	
-	
-	
-	
 	thread ReadSpeed
 		features
 			speed_data_in: in data port;
@@ -167,9 +163,6 @@ public
 		
 	end ControlRules.impl;
 	
-	
-	
-	
 	processor MainProcessor
 			features
 				bus_access: requires bus access HardwareConnection;
@@ -188,9 +181,6 @@ public
 	
 	bus implementation HardwareConnection.impl
 	end HardwareConnection.impl;
-	
-	
-	
 	
 
 	device SpeedSensor
